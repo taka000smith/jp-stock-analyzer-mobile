@@ -13,7 +13,7 @@ st.markdown("""
 <style>
 /* Mobile first */
 .block-container {
-    padding-top: 0.7rem;
+    padding-top: 4.2rem;
     padding-bottom: 1.5rem;
     padding-left: 0.8rem;
     padding-right: 0.8rem;
@@ -551,16 +551,28 @@ if "analysis_has_run" not in st.session_state:
 # =========================================================
 st.markdown("""
 <div style="
-    font-size: 1.55rem;
-    font-weight: 800;
-    line-height: 1.25;
-    margin: 0.1rem 0 0.3rem 0;
-    color: inherit;
+    padding: 0.15rem 0 0.35rem 0;
+    margin: 0;
 ">
-📱 日本株分析 Mobile
+  <div style="
+      font-size: 1.65rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: inherit;
+      margin-bottom: 0.15rem;
+  ">
+    📈 日本株分析
+  </div>
+  <div style="
+      font-size: 0.95rem;
+      opacity: 0.78;
+      line-height: 1.25;
+  ">
+    ファンダ＋テクニカル
+  </div>
 </div>
 """, unsafe_allow_html=True)
-st.caption("スマホ向け表示。企業評価とEntry評価を分けて確認できます。")
+st.caption("企業評価とEntry評価を分けて確認できます。")
 
 st.subheader("銘柄入力")
 codes_text = st.text_area(
@@ -872,4 +884,4 @@ if st.session_state.analysis_has_run:
             "決算短信、決算説明資料、TDnet等の一次情報で必ず確認してください。"
         )
 elif not st.session_state.analysis_has_run:
-    st.info("左側に銘柄コードを入力して「分析する」を押してください。")
+    st.info("銘柄コードを入力して「分析する」を押してください。")
