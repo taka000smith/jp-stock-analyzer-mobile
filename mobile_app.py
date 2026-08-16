@@ -549,7 +549,17 @@ if "analysis_has_run" not in st.session_state:
 # =========================================================
 # UI
 # =========================================================
-st.title("📱 日本株分析 Mobile")
+st.markdown("""
+<div style="
+    font-size: 1.55rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0.1rem 0 0.3rem 0;
+    color: inherit;
+">
+📱 日本株分析 Mobile
+</div>
+""", unsafe_allow_html=True)
 st.caption("スマホ向け表示。企業評価とEntry評価を分けて確認できます。")
 
 st.subheader("銘柄入力")
